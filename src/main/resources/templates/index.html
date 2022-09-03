@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home Page</title>
+</head>
+<body>
+	<h1>Hello !</h1>
+	<p>
+		Welcome to <span th:text="${appName}">Our App</span>
+	</p>
+	<span th:text="${gl}">Our App</span>
+	<table>
+		<tbody>
+			<tr th:each="g : ${gl}">
+				<td><span th:text="${g.name}"> Title </span></td>
+				<td><span th:text="${g.quantity}"> Author </span></td>
+			</tr>
+		</tbody>
+	</table>
+	<link th:href="@{/style.css}" rel="stylesheet" />
+</body>
+</html>
